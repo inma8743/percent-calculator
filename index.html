@@ -14,6 +14,13 @@
   <meta property="og:description" content="비율, 증감률, 할인 가격을 한 번에 계산하세요.">
   <meta property="og:url" content="https://inma8743.github.io/percent-calculator/">
   <title>퍼센트 계산기 | 비율·증감률·할인 계산</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EZW95TCSF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3EZW95TCSF');
+  </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4587553505034907" crossorigin="anonymous"></script>
   <style>
     * { box-sizing: border-box; }
@@ -162,6 +169,7 @@
     ];
 
     ids.forEach((id) => document.getElementById(id).addEventListener('input', calculate));
+    const trackedCalculators = new Set();
 
     function value(id) {
       return Number(document.getElementById(id).value) || 0;
@@ -191,6 +199,15 @@
       const discounted = price * (1 - discount / 100);
       document.getElementById('discount-result').textContent =
         `할인가: ${format(discounted, 0)}원 · ${format(price - discounted, 0)}원 절약`;
+
+      const activeId = document.activeElement && document.activeElement.id;
+      if (activeId) {
+        const calculatorType = activeId.split('-')[0];
+        if (!trackedCalculators.has(calculatorType)) {
+          gtag('event', 'percent_calculate', { calculator_type: calculatorType });
+          trackedCalculators.add(calculatorType);
+        }
+      }
     }
   </script>
 </body>
