@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="iJYo0s5IVucjVPlcUXP11HltZW35jnzpXC0C4rTFapw">
-  <meta name="description" content="비율, 퍼센트, 증감률, 할인 가격을 빠르게 계산하는 무료 퍼센트 계산기입니다. 입력값은 서버에 저장되지 않습니다.">
+  <meta name="description" content="비율, 퍼센트, 증감률, 할인 가격을 빠르게 계산하는 무료 퍼센트 계산기입니다. 입력값은 서버에 저장되지 않으며 국장 레이더와 무료 계산기 모음도 함께 이용할 수 있습니다.">
   <meta name="keywords" content="퍼센트 계산기, 비율 계산기, 할인 계산기, 증감률 계산기, 백분율 계산">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#6d5dfc">
@@ -87,6 +87,30 @@
       line-height: 1.75;
     }
     .guide h2, .guide h3 { line-height: 1.35; }
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 20px 0 8px;
+    }
+    .quick-link {
+      padding: 16px;
+      border: 1px solid rgba(109, 93, 252, .14);
+      border-radius: 18px;
+      color: #5142dc;
+      background: rgba(255,255,255,.86);
+      box-shadow: 0 12px 32px rgba(63, 54, 125, .07);
+      font-weight: 900;
+      text-decoration: none;
+    }
+    .quick-link span {
+      display: block;
+      margin-top: 6px;
+      color: #77758a;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
     .ad {
       width: 100%;
       min-height: 140px;
@@ -102,7 +126,7 @@
     footer { padding: 10px 0 40px; color: #77758a; text-align: center; font-size: 13px; }
     @media (max-width: 680px) {
       header { padding-top: 32px; }
-      .grid { grid-template-columns: 1fr; }
+      .grid, .quick-links { grid-template-columns: 1fr; }
       .calculator { padding: 20px; }
       input { flex: 1; width: 90px; }
       .ad iframe, .ad ins { max-width: 100% !important; }
@@ -160,6 +184,13 @@
       </article>
     </section>
 
+    <nav class="quick-links" aria-label="계산 후 많이 찾는 도구">
+      <a class="quick-link" href="https://stock-board-ten.vercel.app/" data-track="entry_stock_radar">국장 레이더<span>증감률 확인 후 주식 뉴스·테마 보기</span></a>
+      <a class="quick-link" href="https://password-generator-self-seven.vercel.app/calculators.html" data-track="entry_calculators_hub">계산기 모음<span>평수·만 나이·디데이 계산기</span></a>
+      <a class="quick-link" href="https://area-calculator-dun.vercel.app/" data-track="entry_area_calculator">평수 계산기<span>제곱미터와 평 변환</span></a>
+      <a class="quick-link" href="https://password-generator-self-seven.vercel.app/tools.html" data-track="entry_tools_hub">무료 도구 모음<span>비밀번호·문서·개발자 도구</span></a>
+    </nav>
+
     <div class="ad">
       <script src="https://ads-partners.coupang.com/g.js"></script>
       <script>
@@ -201,6 +232,11 @@
     ];
 
     ids.forEach((id) => document.getElementById(id).addEventListener('input', calculate));
+    document.querySelectorAll('[data-track]').forEach((link) => {
+      link.addEventListener('click', () => {
+        gtag('event', 'percent_tool_click', { target: link.dataset.track });
+      });
+    });
     const trackedCalculators = new Set();
 
     function value(id) {
