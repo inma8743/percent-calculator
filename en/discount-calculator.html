@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-adsense-account" content="ca-pub-4587553505034907">
+  <meta name="description" content="Free discount calculator. Enter the original price and discount percent to calculate the final price and savings.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://percent-calculator-ten.vercel.app/en/discount-calculator.html">
+  <link rel="alternate" hreflang="ko" href="https://percent-calculator-ten.vercel.app/discount-calculator.html">
+  <link rel="alternate" hreflang="en" href="https://percent-calculator-ten.vercel.app/en/discount-calculator.html">
+  <title>Discount Calculator | Calculate Sale Price And Savings</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EZW95TCSF"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3EZW95TCSF');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"How do I calculate a discount?","acceptedAnswer":{"@type":"Answer","text":"Multiply the original price by the discount percent divided by 100 to get the savings. Subtract the savings from the original price to get the final price."}},{"@type":"Question","name":"What is 20% off?","acceptedAnswer":{"@type":"Answer","text":"20% off means you pay 80% of the original price. Multiply the original price by 0.8."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4587553505034907" crossorigin="anonymous"></script>
+  <style>body{margin:0;color:#23233a;background:#f7f7fb;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}header,main,footer{width:min(920px,calc(100% - 32px));margin:auto}header{padding:42px 0 22px}h1{margin:0 0 10px;font-size:clamp(30px,6vw,46px)}p,li{line-height:1.75}.tool,.section{margin:18px 0;padding:22px;border:1px solid #e4e2f8;border-radius:16px;background:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}label{display:block;margin-bottom:6px;font-weight:800}input{width:100%;padding:13px;border:1px solid #d8d5f2;border-radius:10px;font:inherit}.result{margin-top:16px;padding:16px;border-radius:12px;background:#f0eeff;color:#4f46e5;font-size:24px;font-weight:900}.links a{display:inline-block;margin:5px 10px 5px 0;color:#4f46e5;font-weight:800}footer{padding:24px 0 42px;color:#666}@media(max-width:720px){.grid{grid-template-columns:1fr}}</style>
+</head>
+<body><header><h1>Discount Calculator</h1><p>Enter the original price and discount percent to calculate the final sale price.</p></header><main>
+  <section class="tool"><div class="grid"><div><label for="price">Original price</label><input id="price" type="number" inputmode="decimal" placeholder="50"></div><div><label for="rate">Discount %</label><input id="rate" type="number" inputmode="decimal" placeholder="20"></div><div><label for="extra">Extra discount %</label><input id="extra" type="number" inputmode="decimal" placeholder="0"></div></div><div id="result" class="result">Enter a price.</div></section>
+  <section class="section"><h2>Discount formula</h2><p>Final price = original price x (1 - discount / 100). If a $50 item is 20% off, the final price is 50 x 0.8 = $40.</p><p>For an extra discount, apply the second discount to the already discounted price instead of simply adding the percentages.</p></section>
+  <section class="section links"><h2>Related calculators</h2><a href="/en.html">Percentage calculator</a><a href="/en/percentage-increase-calculator.html">Percentage increase calculator</a><a href="/en/percentage-of-total.html">Percentage of total</a><a href="https://password-generator-self-seven.vercel.app/en/calculators.html">Free calculators</a></section>
+</main><footer><a href="/privacy.html">Privacy and ads notice</a></footer><script>const price=document.getElementById('price'),rate=document.getElementById('rate'),extra=document.getElementById('extra'),result=document.getElementById('result');[price,rate,extra].forEach(el=>el.addEventListener('input',calc));let tracked=false;function money(v){return v.toLocaleString('en-US',{maximumFractionDigits:2})}function calc(){const p=Number(price.value)||0,r=Number(rate.value)||0,e=Number(extra.value)||0;if(!p){result.textContent='Enter a price.';return}const first=p*(1-r/100),final=first*(1-e/100);result.textContent=`Final price ${money(final)} · savings ${money(p-final)}`;if(!tracked){gtag('event','discount_calculate_en');tracked=true}}</script></body></html>

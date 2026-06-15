@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-adsense-account" content="ca-pub-4587553505034907">
   <meta name="description" content="이전 값과 이후 값을 입력해 증가율, 감소율, 변화량을 계산하는 무료 증가율 계산기입니다.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://percent-calculator-ten.vercel.app/increase-rate-calculator.html">
+  <link rel="alternate" hreflang="ko" href="https://percent-calculator-ten.vercel.app/increase-rate-calculator.html">
+  <link rel="alternate" hreflang="en" href="https://percent-calculator-ten.vercel.app/en/percentage-increase-calculator.html">
   <title>증가율 계산기 | 이전 값 대비 몇 퍼센트 올랐는지 계산</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EZW95TCSF"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3EZW95TCSF');</script>
@@ -18,7 +21,7 @@
   <section class="tool"><div class="grid"><div><label for="before">이전 값</label><input id="before" type="number" inputmode="decimal" placeholder="100"></div><div><label for="after">이후 값</label><input id="after" type="number" inputmode="decimal" placeholder="125"></div></div><div id="result" class="result">값을 입력하세요.</div></section>
   <section class="section"><h2>증가율 계산 공식</h2><p>증가율은 <strong>(이후 값 - 이전 값) / 이전 값 x 100</strong>입니다. 100에서 125로 바뀌었다면 증가율은 25%입니다.</p><p>값이 줄어든 경우에는 같은 공식으로 감소율을 계산할 수 있습니다. 결과가 음수이면 감소, 양수이면 증가입니다.</p></section>
   <section class="section"><h2>활용 예시</h2><ul><li>매출이 전월 대비 몇 퍼센트 늘었는지 확인</li><li>가격 인상률 또는 할인 전후 변화율 계산</li><li>방문자 수, 클릭 수, 전환 수의 기간별 변화 비교</li></ul></section>
-  <section class="section links"><h2>관련 계산기</h2><a href="/">퍼센트 계산기</a><a href="/discount-calculator.html">할인율 계산기</a><a href="/percentage-of-total.html">전체 중 비율 계산기</a><a href="https://password-generator-self-seven.vercel.app/calculators.html">무료 계산기 모음</a></section>
+  <section class="section links"><h2>관련 계산기</h2><a href="/">퍼센트 계산기</a><a href="/discount-calculator.html">할인율 계산기</a><a href="/percentage-of-total.html">전체 중 비율 계산기</a><a href="/en/percentage-increase-calculator.html">English percentage increase calculator</a><a href="https://password-generator-self-seven.vercel.app/calculators.html">무료 계산기 모음</a></section>
 </main>
 <footer><a href="/privacy.html">개인정보처리방침</a></footer>
 <script>const before=document.getElementById('before'),after=document.getElementById('after'),result=document.getElementById('result');[before,after].forEach(el=>el.addEventListener('input',calc));let tracked=false;function fmt(v){return v.toLocaleString('ko-KR',{maximumFractionDigits:2})}function calc(){const b=Number(before.value),a=Number(after.value);if(!Number.isFinite(b)||!Number.isFinite(a)||!b){result.textContent='값을 입력하세요.';return}const change=(a-b)/Math.abs(b)*100;const label=change>0?'증가':change<0?'감소':'변화 없음';result.textContent=`${fmt(Math.abs(change))}% ${label} · 변화량 ${fmt(a-b)}`;if(!tracked){gtag('event','increase_rate_calculate');tracked=true}}</script>

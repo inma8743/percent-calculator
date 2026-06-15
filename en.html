@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-adsense-account" content="ca-pub-4587553505034907">
+  <meta name="google-site-verification" content="iJYo0s5IVucjVPlcUXP11HltZW35jnzpXC0C4rTFapw">
+  <meta name="description" content="Free percentage calculator for percentage of a number, percentage increase or decrease, discount price, and percentage of total. Runs in your browser.">
+  <meta name="keywords" content="percentage calculator, discount calculator, percentage increase calculator, percentage of total calculator, percent change calculator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://percent-calculator-ten.vercel.app/en.html">
+  <link rel="alternate" hreflang="ko" href="https://percent-calculator-ten.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://percent-calculator-ten.vercel.app/en.html">
+  <link rel="alternate" hreflang="x-default" href="https://percent-calculator-ten.vercel.app/en.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Free Percentage Calculator">
+  <meta property="og:description" content="Calculate discounts, percent change, ratios, and percentage of total.">
+  <meta property="og:url" content="https://percent-calculator-ten.vercel.app/en.html">
+  <title>Percentage Calculator | Discount, Percent Change, Percentage Of Total</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EZW95TCSF"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3EZW95TCSF');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Percentage Calculator","url":"https://percent-calculator-ten.vercel.app/en.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","isAccessibleForFree":true,"inLanguage":"en","description":"Free browser-based percentage calculator for discounts, percentage increase, and percentage of total."}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4587553505034907" crossorigin="anonymous"></script>
+  <style>
+    *{box-sizing:border-box}body{margin:0;color:#242332;background:linear-gradient(145deg,#f4f1ff,#f8fbff 55%,#effaf6);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}header,main,footer{width:min(960px,calc(100% - 32px));margin:auto}header{padding:46px 0 24px;text-align:center}h1{margin:0 0 10px;font-size:clamp(30px,7vw,48px);letter-spacing:-2px}header p{margin:0;color:#67657a}.language,.links{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:16px 0}.language a,.links a{padding:8px 11px;border-radius:999px;color:#5142dc;background:#fff;font-size:13px;font-weight:900;text-decoration:none}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card,.guide{padding:24px;border:1px solid rgba(109,93,252,.13);border-radius:22px;background:rgba(255,255,255,.9);box-shadow:0 16px 45px rgba(63,54,125,.08)}.card h2{margin:0 0 16px;font-size:18px}.formula{display:flex;align-items:center;flex-wrap:wrap;gap:8px}input{width:120px;min-width:0;padding:12px;border:1px solid #d9d5f1;border-radius:11px;font:inherit;outline:none}input:focus{border-color:#6d5dfc;box-shadow:0 0 0 3px rgba(109,93,252,.12)}.result{margin-top:18px;padding:16px;border-radius:14px;color:#5142dc;background:#f1efff;font-size:22px;font-weight:800;overflow-wrap:anywhere}.guide{margin:28px 0;line-height:1.75}.guide a{color:#5142dc;font-weight:900}.ad{min-height:140px;margin:20px auto;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;overflow:hidden}.ad-note{margin:0;color:#77758a;font-size:12px;text-align:center}footer{padding:10px 0 40px;color:#77758a;text-align:center;font-size:13px}@media(max-width:680px){header{padding-top:32px}.grid{grid-template-columns:1fr}.card{padding:20px}input{flex:1;width:90px}.ad iframe,.ad ins{max-width:100%!important}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Percentage Calculator</h1>
+    <p>Calculate percentages, discounts, percent change, and ratios instantly in your browser.</p>
+    <nav class="language" aria-label="Language"><a href="/">한국어</a><a href="/en.html">English</a></nav>
+  </header>
+  <main>
+    <section class="grid" aria-label="Percentage calculators">
+      <article class="card"><h2>What is X% of Y?</h2><div class="formula"><input id="part-percent" type="number" placeholder="20" aria-label="Percent"><span>% of</span><input id="part-total" type="number" placeholder="500" aria-label="Total"></div><div id="part-result" class="result">Result: 0</div></article>
+      <article class="card"><h2>X is what percent of Y?</h2><div class="formula"><input id="ratio-value" type="number" placeholder="30" aria-label="Part"><span>of</span><input id="ratio-total" type="number" placeholder="120" aria-label="Total"></div><div id="ratio-result" class="result">Result: 0%</div></article>
+      <article class="card"><h2>Percentage increase or decrease</h2><div class="formula"><input id="change-before" type="number" placeholder="100" aria-label="Before"><span>to</span><input id="change-after" type="number" placeholder="125" aria-label="After"></div><div id="change-result" class="result">Change: 0%</div></article>
+      <article class="card"><h2>Discount price</h2><div class="formula"><input id="discount-price" type="number" placeholder="50" aria-label="Original price"><span>with</span><input id="discount-percent" type="number" placeholder="20" aria-label="Discount percent"><span>% off</span></div><div id="discount-result" class="result">Final price: 0</div></article>
+    </section>
+    <nav class="links" aria-label="Focused calculators"><a href="/en/discount-calculator.html">Discount calculator</a><a href="/en/percentage-increase-calculator.html">Percentage increase calculator</a><a href="/en/percentage-of-total.html">Percentage of total</a><a href="https://password-generator-self-seven.vercel.app/en/calculators.html">More free calculators</a></nav>
+    <div class="ad"><script src="https://ads-partners.coupang.com/g.js"></script><script>new PartnersCoupang.G({"id":991032,"template":"carousel","trackingCode":"AF5435387","width":"680","height":"140","tsource":""});</script><p class="ad-note">Affiliate disclosure: this site may earn a commission from Coupang Partners links.</p></div>
+    <section class="guide">
+      <h2>Common formulas</h2>
+      <p><strong>Percentage of a number:</strong> total x percent / 100.</p>
+      <p><strong>Percentage of total:</strong> part / total x 100.</p>
+      <p><strong>Percent change:</strong> (new value - old value) / old value x 100.</p>
+      <p><strong>Discount price:</strong> original price x (1 - discount percent / 100).</p>
+      <h2>Related tools</h2>
+      <p><a href="https://area-calculator-dun.vercel.app/">Area calculator</a> · <a href="https://age-calculator-mu-two.vercel.app/">Age calculator</a> · <a href="https://dday-calculator-seven.vercel.app/en.html">D-Day calculator</a> · <a href="https://stock-board-ten.vercel.app/en.html">Korea Stock Hub</a></p>
+    </section>
+  </main>
+  <footer>© 2026 Percentage Calculator · <a href="/privacy.html">Privacy and ads notice</a></footer>
+  <script>
+    const ids=['part-percent','part-total','ratio-value','ratio-total','change-before','change-after','discount-price','discount-percent'];
+    ids.forEach((id)=>document.getElementById(id).addEventListener('input',calculate));
+    const tracked=new Set();
+    function value(id){return Number(document.getElementById(id).value)||0}
+    function format(n,d=2){return Number.isFinite(n)?n.toLocaleString('en-US',{maximumFractionDigits:d}):'Cannot calculate'}
+    function calculate(){const part=value('part-total')*value('part-percent')/100;document.getElementById('part-result').textContent=`Result: ${format(part)}`;const ratioTotal=value('ratio-total');const ratio=ratioTotal?value('ratio-value')/ratioTotal*100:0;document.getElementById('ratio-result').textContent=`Result: ${format(ratio)}%`;const before=value('change-before');const change=before?(value('change-after')-before)/Math.abs(before)*100:0;const direction=change>0?'increase':change<0?'decrease':'no change';document.getElementById('change-result').textContent=`Change: ${format(Math.abs(change))}% ${direction}`;const price=value('discount-price');const discount=value('discount-percent');const discounted=price*(1-discount/100);document.getElementById('discount-result').textContent=`Final price: ${format(discounted,2)} · saved ${format(price-discounted,2)}`;const active=document.activeElement&&document.activeElement.id;if(active){const type=active.split('-')[0];if(!tracked.has(type)){gtag('event','percent_calculate_en',{calculator_type:type});tracked.add(type)}}}
+  </script>
+</body>
+</html>

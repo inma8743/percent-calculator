@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-adsense-account" content="ca-pub-4587553505034907">
+  <meta name="description" content="Free percentage increase calculator. Compare an old value and a new value to calculate percent increase, decrease, and absolute change.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://percent-calculator-ten.vercel.app/en/percentage-increase-calculator.html">
+  <link rel="alternate" hreflang="ko" href="https://percent-calculator-ten.vercel.app/increase-rate-calculator.html">
+  <link rel="alternate" hreflang="en" href="https://percent-calculator-ten.vercel.app/en/percentage-increase-calculator.html">
+  <title>Percentage Increase Calculator | Percent Change Calculator</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EZW95TCSF"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3EZW95TCSF');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4587553505034907" crossorigin="anonymous"></script>
+  <style>body{margin:0;color:#23233a;background:#f7f7fb;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}header,main,footer{width:min(920px,calc(100% - 32px));margin:auto}header{padding:42px 0 22px}h1{margin:0 0 10px;font-size:clamp(30px,6vw,46px)}p,li{line-height:1.75}.tool,.section{margin:18px 0;padding:22px;border:1px solid #e4e2f8;border-radius:16px;background:#fff}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}label{display:block;margin-bottom:6px;font-weight:800}input{width:100%;padding:13px;border:1px solid #d8d5f2;border-radius:10px;font:inherit}.result{margin-top:16px;padding:16px;border-radius:12px;background:#f0eeff;color:#4f46e5;font-size:24px;font-weight:900}.links a{display:inline-block;margin:5px 10px 5px 0;color:#4f46e5;font-weight:800}footer{padding:24px 0 42px;color:#666}@media(max-width:720px){.grid{grid-template-columns:1fr}}</style>
+</head>
+<body><header><h1>Percentage Increase Calculator</h1><p>Compare an old value and a new value to calculate percentage increase or decrease.</p></header><main>
+  <section class="tool"><div class="grid"><div><label for="before">Old value</label><input id="before" type="number" inputmode="decimal" placeholder="100"></div><div><label for="after">New value</label><input id="after" type="number" inputmode="decimal" placeholder="125"></div></div><div id="result" class="result">Enter values.</div></section>
+  <section class="section"><h2>Percent change formula</h2><p>Percent change = (new value - old value) / old value x 100. If a value rises from 100 to 125, the increase is 25%.</p><p>If the result is negative, the value decreased. If it is positive, the value increased.</p></section>
+  <section class="section links"><h2>Related calculators</h2><a href="/en.html">Percentage calculator</a><a href="/en/discount-calculator.html">Discount calculator</a><a href="/en/percentage-of-total.html">Percentage of total</a><a href="https://stock-board-ten.vercel.app/en.html">Korea stock market guide</a></section>
+</main><footer><a href="/privacy.html">Privacy and ads notice</a></footer><script>const before=document.getElementById('before'),after=document.getElementById('after'),result=document.getElementById('result');[before,after].forEach(el=>el.addEventListener('input',calc));let tracked=false;function fmt(v){return v.toLocaleString('en-US',{maximumFractionDigits:2})}function calc(){const b=Number(before.value),a=Number(after.value);if(!Number.isFinite(b)||!Number.isFinite(a)||!b){result.textContent='Enter values.';return}const change=(a-b)/Math.abs(b)*100;const label=change>0?'increase':change<0?'decrease':'no change';result.textContent=`${fmt(Math.abs(change))}% ${label} · change ${fmt(a-b)}`;if(!tracked){gtag('event','percentage_increase_calculate_en');tracked=true}}</script></body></html>
