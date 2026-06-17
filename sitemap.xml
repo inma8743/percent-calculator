@@ -31,6 +31,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://percent-calculator-ten.vercel.app/vat-calculator.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://percent-calculator-ten.vercel.app/margin-rate-calculator.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
     <loc>https://percent-calculator-ten.vercel.app/en.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
